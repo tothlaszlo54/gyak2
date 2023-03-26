@@ -1,4 +1,4 @@
-package org.example;
+package org.example.book;
 
 public class Book {
     private String title;

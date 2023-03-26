@@ -24,7 +24,7 @@ public class Age {
     }
 
     public Age(int month, int day) {
-        if ( (0 > month || month > 12) || (0 > day || day > 31)) {
+        if ((0 > month || month > 12) || (0 > day || day > 31)) {
             throw new IllegalArgumentException("Nem helyes a kor megadása: hónap: " + month + " nap: " + day);
         }
         this.month = month;
@@ -32,21 +32,21 @@ public class Age {
     }
 
     public void setYear(int year) {
-        if (0 > year ) {
-            throw new IllegalArgumentException("Nem helyes a kor megadása: év: " + year );
+        if (0 > year) {
+            throw new IllegalArgumentException("Nem helyes a kor megadása: év: " + year);
         }
         this.year = year;
     }
 
     public void setMonth(int month) {
-        if ( 0 > month || month > 12 ) {
-            throw new IllegalArgumentException("Nem helyes a kor megadása: hónap: " + month );
+        if (0 > month || month > 12) {
+            throw new IllegalArgumentException("Nem helyes a kor megadása: hónap: " + month);
         }
         this.month = month;
     }
 
     public void setDay(int day) {
-        if ( 0 > day || day > 31) {
+        if (0 > day || day > 31) {
             throw new IllegalArgumentException("Nem helyes a kor megadása: hónap: nap: " + day);
         }
 
@@ -65,5 +65,8 @@ public class Age {
         return this.day;
     }
 
-
+    @Override
+    public String toString() {
+        return "(" + this.year + "," + this.month + "," + this.day + ") (y,m,d)";
+    }
 }
